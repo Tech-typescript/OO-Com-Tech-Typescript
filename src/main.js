@@ -74,3 +74,15 @@ function exibirResultado() {
 }
 // Esperar até que o DOM esteja completamente carregado
 document.addEventListener('DOMContentLoaded', exibirResultado);
+
+document.getElementById("toggleFormButton").addEventListener("click", function() {
+    var form = document.getElementById("inputForm");
+    var button = document.getElementById("toggleFormButton");
+    if (form.style.display === "none") {
+      form.style.display = "block";
+      button.textContent = "Cancelar"
+    } else {
+      form.style.display = "none";
+      button.textContent = "Adicionar grupo"
+    }
+  });
