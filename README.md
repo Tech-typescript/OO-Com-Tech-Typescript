@@ -280,3 +280,51 @@ Agora que você tem uma noção básica do TypeScript, sinta-se à vontade para 
 - <span style="color: #008080">[w3schools](https://www.w3schools.com/typescript/): TypeScript Tutorial.</span>
 - <span style="color: #008080">[typescriptlang.org](https://www.typescriptlang.org/pt/docs/handbook/typescript-in-5-minutes.html): TypeScript para programadores JavaScript.</span>
 - <span style="color: #008080">[chat](https://chat.openai.com): IA.</span>
+
+*Diagrama de classe UML*
+
+```mermaid
+---
+title: Sistema de avaliação de trabalho acadêmico
+---
+
+classDiagram
+    SistemaCorrecao <|-- Apresentacao
+    SistemaCorrecao <|-- Grupo
+    
+    class Apresentacao {
+        -tempoGasto
+        -qlApresentacao
+        -numeroEquipes
+        -premiacao
+
+        +getNome()
+        +getModalidade()
+        +getNumeroEquipes()
+        +getPremiacao()
+    }
+
+    class Grupo {
+        -idGrupo
+        -data
+        -horas
+        -tempoApresentacao
+        -qtApresentacao
+        -resultado
+        
+        +getIdGrupo()
+        +geData()
+        +getHoras()
+        +getTempoArpresentacao()
+        +getApresentacao()
+        +getResultado()
+    }
+
+    class SistemaCorrecao {
+         -grupo
+         -apresentação
+         
+        +exibirResultado()
+        +getRegiao()
+    }
+```
