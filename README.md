@@ -2,9 +2,10 @@
 
 # Participantes: 
 > - Elias
-> - Rafaela
+> - Rafael
 > - Vidaflor
 > - Pedro Henrique Marques Siqueira
+> - Antônio
 
 # Introdução:
 > Olá a todos! Hoje estaremos explorando o TypeScript, uma linguagem de programação que traz recursos adicionais para o JavaScript, incluindo suporte a tipos estáticos e paradigma orientado a objetos.
