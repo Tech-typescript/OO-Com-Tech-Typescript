@@ -10,7 +10,7 @@ class GrupoApresentacao {
     this.data = data;
     this.horario = horario;
     this.tempoGasto = 0;
-      this.qualidadeApresentacao = 0;
+    this.qualidadeApresentacao = 0;
   }
 
   atribuirNota(tempoGasto: number, qualidadeApresentacao: number): void {
@@ -26,6 +26,10 @@ class GrupoApresentacao {
 
     else if (this.tempoGasto < 13) {
       this.qualidadeApresentacao -= 0.5 * (15 - this.tempoGasto);
+    }
+
+    if (this.qualidadeApresentacao < 0) {
+      return 0;
     }
 
     return this.qualidadeApresentacao;

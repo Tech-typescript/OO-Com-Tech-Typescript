@@ -18,6 +18,9 @@ var GrupoApresentacao = /** @class */ (function () {
         else if (this.tempoGasto < 13) {
             this.qualidadeApresentacao -= 0.5 * (15 - this.tempoGasto);
         }
+        if (this.qualidadeApresentacao < 0) {
+            return 0;
+        }
         return this.qualidadeApresentacao;
     };
     GrupoApresentacao.prototype.getResultado = function () {
