@@ -1,7 +1,7 @@
 /*============================================================
 File: exemplo.ts.
 Data: 19-07-23_1                                                                                                                                        
-Usuário: Ontura
+Usuário: Onrutas
 -------------------------------------------------------------
 Graduando: Elias de Jesus Miranda 
 DOCENTE: ANDRÉ DE LIMA SALGADO - DOCENTE - DCC
@@ -16,4 +16,3 @@ function saudacao(nome: string): void {
   console.log("Olá, " + nome + "!");
 }
 
-saudacao(nome);

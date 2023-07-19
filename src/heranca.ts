@@ -1,7 +1,7 @@
 /*============================================================
 File: exemplo.ts.
 Data: 19-07-23_1                                                                                                                                        
-Usuário: Ontura
+Usuário: Onrutas
 -------------------------------------------------------------
 Graduando: Elias de Jesus Miranda 
 DOCENTE: ANDRÉ DE LIMA SALGADO - DOCENTE - DCC
@@ -20,7 +20,4 @@ class Estudante extends Pessoa {
     console.log("Oi, meu nome é " + this.nome + " e eu sou um estudante.");
   }
 }
-
-let estudante1 = new Estudante("Carlos", 20, "12345");
-estudante1.apresentar();
 
