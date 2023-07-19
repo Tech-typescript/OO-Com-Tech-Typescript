@@ -1,6 +1,6 @@
 ## OO-Com-TypeScript
 
-# Participantes: 
+#### Participantes: 
 > - Elias
 > - Rafael
 > - Vidaflor
@@ -75,6 +75,7 @@ Agora que configuramos nosso ambiente, vamos criar uma classe simples em TypeScr
 
 1. Crie um novo arquivo HTML chamado "index.html" em seu editor de texto e adicione o seguinte código, note que este
    arquivo é o responsável para chamar outras paginhas no servidor web:
+   
    ```html
    <!DOCTYPE html>
    <html>
@@ -91,7 +92,7 @@ Agora que configuramos nosso ambiente, vamos criar uma classe simples em TypeScr
    
    ```
 
-2. Salve o arquivo e abra-o em seu navegador. Abra o console do navegador para ver a saudação sendo exibida.
+3. Salve o arquivo e abra-o em seu navegador. Abra o console do navegador para ver a saudação sendo exibida.
 
 ## V. Executando o exemplo no **web local**:
 Se você deseja executar um arquivo HTML sem usar um navegador, pode fazê-lo utilizando um servidor web local. Um servidor web local permite que você hospede e execute o arquivo HTML em um ambiente semelhante ao de um servidor real, mas apenas no seu computador.
@@ -218,12 +219,12 @@ let cachorro1 = new Cachorro("Bobby");
 cachorro1.fazerBarulho();
 ```
 
-Conclusão:
-Esses são apenas alguns exemplos de como o TypeScript suporta o paradigma orientado a objetos. Com o TypeScript, podemos aproveitar a **tipagem estática**, classes, herança, interfaces e muito mais para escrever código mais seguro e reutilizável. Esperamos que essa introdução tenha despertado seu interesse em explorar ainda mais o TypeScript e suas capacidades!
+## VII. Conclusão:
+Esses são apenas alguns exemplos de como o TypeScript suporta o paradigma orientado a objetos. Com o TypeScript, podemos aproveitar a **tipagem estática, classes, herança, interfaces** e muito mais para escrever código mais seguro e reutilizável. 
 
-Nesta breve apresentação, exploramos o TypeScript e sua capacidade de trazer recursos da orientação a objetos para o JavaScript. Vimos como criar uma classe simples, compilar o código para JavaScript e executá-lo em um navegador. O TypeScript oferece uma maneira poderosa de escrever código JavaScript mais seguro e escalável.
+Vimos como criar uma classe simples, compilar o código para JavaScript e executá-lo em um navegador out servidlor logal. O TypeScript oferece uma maneira poderosa de escrever código JavaScript mais seguro e escalável.
 
-Agora que você tem uma noção básica do TypeScript, sinta-se à vontade para explorar mais recursos, como herança, interfaces e tipos estáticos. Divirta-se programando!
+Agora que você tem uma noção básica do TypeScript, sinta-se à vontade para explorar mais recursos, como **herança, interfaces e tipos estáticos**. Divirta-se programando!
 
 
 ## Referências
