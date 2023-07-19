@@ -7,3 +7,20 @@ Graduando: Elias de Jesus Miranda
 DOCENTE: ANDRÉ DE LIMA SALGADO - DOCENTE - DCC
 Disciplina: Sistemas Distribuídos (14A) 
 -------------------------------------------------------------*/
+
+class Estudante extends Pessoa {
+  matricula: string;
+
+  constructor(nome: string, idade: number, matricula: string) {
+    super(nome, idade);
+    this.matricula = matricula;
+  }
+
+  apresentar(): void {
+    console.log("Oi, meu nome é " + this.nome + " e eu sou um estudante.");
+  }
+}
+
+let estudante1 = new Estudante("Carlos", 20, "12345");
+estudante1.apresentar();
+
