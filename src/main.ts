@@ -10,12 +10,9 @@ class GrupoApresentacao {
     this.data = data;
     this.horario = horario;
     this.tempoGasto = 0;
-    this.qualidadeApresentacao = 0;
+      this.qualidadeApresentacao = 0;
   }
 
-<<<<<<< HEAD
-      return this.qualidadeApresentacao;
-=======
   atribuirNota(tempoGasto: number, qualidadeApresentacao: number): void {
     this.tempoGasto = tempoGasto;
     this.qualidadeApresentacao = qualidadeApresentacao;
@@ -25,7 +22,6 @@ class GrupoApresentacao {
     if (this.tempoGasto > 17) {
       // Penalidade por tempo gasto fora dos critérios
       this.qualidadeApresentacao -= 0.5 * (this.tempoGasto - 15);
->>>>>>> c9814ff352c3d8a1ba9e7d146f5fcbb8fe35a5f5
     }
 
     else if (this.tempoGasto < 13) {
@@ -39,7 +35,10 @@ class GrupoApresentacao {
     const nota = this.verificarNota();
     return `Grupo ${this.grupo} - Nota: ${nota}`;
   }
+
 }
+
+
 
 class SistemaCorrecao {
   public grupos: GrupoApresentacao[] = [];
@@ -93,7 +92,6 @@ if (resultadoDiv !== null) {
 }
 
 // Esperar até que o DOM esteja completamente carregado
-<<<<<<< HEAD
 document.addEventListener('DOMContentLoaded', exibirResultado);
 
 document.getElementById("toggleFormButton").addEventListener("click", function() {
@@ -141,6 +139,3 @@ function submitForm(grupo, data, horario, tempo, qualidade) {
 
 }
 
-=======
-document.addEventListener('DOMContentLoaded', exibirResultado);
->>>>>>> c9814ff352c3d8a1ba9e7d146f5fcbb8fe35a5f5

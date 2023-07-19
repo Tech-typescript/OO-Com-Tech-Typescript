@@ -90,19 +90,23 @@ document.getElementById("toggleFormButton").addEventListener("click", function (
 });
 document.getElementById("inputForm").addEventListener("submit", function (event) {
     event.preventDefault();
-    var grupoInput = document.getElementById("grupo").value;
+    var grupoInput = parseInt(document.getElementById("grupo").value, 10);
     var dataInput = document.getElementById("data").value;
     var horarioInput = document.getElementById("horario").value;
-    if (grupoInput && dataInput && horarioInput) {
-        var grupoIn = parseInt(grupoInput);
-        sistema.registrarApresentacao(grupoIn, dataInput, horarioInput);
+    var tempoInput = parseInt(document.getElementById("tempo").value);
+    var qualiInput = parseInt(document.getElementById("qualidade").value);
+    if (grupoInput && dataInput && horarioInput && tempoInput && qualiInput) {
+        sistema.registrarApresentacao(grupoInput, dataInput, horarioInput);
+        sistema.atribuirNota(grupoInput, tempoInput, qualiInput);
         console.log(sistema);
         exibirResultado();
     }
 });
-function submitForm(grupo, data, horario) {
+function submitForm(grupo, data, horario, tempo, qualidade) {
     console.log("Form submitted!");
     console.log("Grupo:", grupo);
     console.log("Data:", data);
     console.log("Horário:", horario);
+    console.log("Tempo:", tempo);
+    console.log("Qualidade:", qualidade);
 }
