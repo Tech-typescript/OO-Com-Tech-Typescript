@@ -28,10 +28,6 @@ class GrupoApresentacao {
         this.qualidadeApresentacao -= 0.5 * (15 - this.tempoGasto);
       }
 
-      if (this.qualidadeApresentacao < 0) {
-        return 0
-      }
-
       return this.qualidadeApresentacao;
     }
   
@@ -113,13 +109,15 @@ document.getElementById("toggleFormButton").addEventListener("click", function()
 document.getElementById("inputForm").addEventListener("submit", function(event) {
   event.preventDefault();
 
-  const grupoInput = (<HTMLInputElement>document.getElementById("grupo")).value;
+  const grupoInput = parseInt((<HTMLInputElement>document.getElementById("grupo")).value, 10);
   const dataInput = (<HTMLInputElement>document.getElementById("data")).value;
   const horarioInput = (<HTMLInputElement>document.getElementById("horario")).value;
+  const tempoInput = parseInt((<HTMLInputElement>document.getElementById("tempo")).value);
+  const qualiInput = parseInt((<HTMLInputElement>document.getElementById("qualidade")).value);
 
-  if(grupoInput && dataInput && horarioInput){
-    const grupoIn = parseInt(grupoInput);
-    sistema.registrarApresentacao(grupoIn, dataInput, horarioInput);
+  if(grupoInput && dataInput && horarioInput && tempoInput && qualiInput){
+    sistema.registrarApresentacao(grupoInput, dataInput, horarioInput);
+    sistema.atribuirNota(grupoInput, tempoInput, qualiInput)
 
     console.log(sistema);
     exibirResultado();
@@ -127,12 +125,14 @@ document.getElementById("inputForm").addEventListener("submit", function(event) 
 
 });
 
-function submitForm(grupo, data, horario) {
+function submitForm(grupo, data, horario, tempo, qualidade) {
 
   console.log("Form submitted!");
   console.log("Grupo:", grupo);
   console.log("Data:", data);
   console.log("Horário:", horario);
+  console.log("Tempo:", tempo);
+  console.log("Qualidade:", qualidade);
 
 }
 
