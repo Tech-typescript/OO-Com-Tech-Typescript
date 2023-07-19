@@ -16,14 +16,14 @@
 O TypeScript é uma linguagem de programação desenvolvida pela Microsoft que estende o JavaScript, adicionando recursos de tipagem estática e suporte a classes, interfaces, herança e outros conceitos da orientação a objetos.
 
 ## II. Vamos configurar o ambiente para o desenvolvimento uma aplicação em TypeScript:
-1. Primeiro, vamos verificar se temos o Node.js instalado em nossas máquinas. Abra o terminal e digite o seguinte comando. Este comando retornará a versão do **node** :
+1. Inicialmente, vamos verificar se o Node.js está instalado na máquina. Para isso, abra o terminal e digite o seguinte comando. Este comando retornará a versão do **node** :
    ```
    node -v
    ```
 
 2. Caso o Node.js não esteja instalado, acesse o site oficial (https://nodejs.org) e faça o download da versão adequada ao seu sistema operacional.
 
-3. Com o Node.js não estiver instalado, vamos instalar o TypeScript globalmente. No terminal, execute o seguinte comando:
+3. Com o Node.js já instalado, o próximo passo é instalar o TypeScript globalmente. No terminal, execute o seguinte comando:
 
    via **npm**
    ```
@@ -38,8 +38,8 @@ O TypeScript é uma linguagem de programação desenvolvida pela Microsoft que e
    ```
    
 ## III. Exemplo de código:
-Agora que configuramos nosso ambiente, vamos criar uma classe simples em TypeScript e compilar para JavaScript.
-1. Crie um novo arquivo chamado "exemplo.ts" em seu editor de texto favorito, no meu caso vou utilizar o vim, e adicione o seguinte código:
+Agora que o ambiente de desenvolvimento foi devidamente configurado, o próximo passo será criar uma classe simples em TypeScript e compilar para JavaScript.
+1. Crie um novo arquivo chamado "exemplo.ts" em seu editor de texto favorito. No nosso caso, vamos utilizar o vim. Adicione o seguinte código:
    
    ```typescript
    class Pessoa {
@@ -68,13 +68,12 @@ Agora que configuramos nosso ambiente, vamos criar uma classe simples em TypeScr
    tsc exemplo.ts
    ```
 
-4. Isso irá gerar um novo arquivo chamado "exemplo.js". Abra-o para ver o código JavaScript equivalente ao código TypeScript que escrevemos.
+4. Isso irá gerar um novo arquivo chamado "exemplo.js". Abra-o para ver o código JavaScript equivalente ao código TypeScript que foi escrito.
 
 
 ## IV. Executando o exemplo no navegador:
 
-1. Crie um novo arquivo HTML chamado "index.html" em seu editor de texto e adicione o seguinte código, note que este
-   arquivo é o responsável para chamar outras paginhas no servidor web:
+1. Crie um novo arquivo HTML chamado "index.html" em seu editor de texto e adicione o seguinte código. Note que este arquivo é o responsável para chamar outras páginas no servidor web:
    
    ```html
    <!DOCTYPE html>
@@ -94,7 +93,7 @@ Agora que configuramos nosso ambiente, vamos criar uma classe simples em TypeScr
 
 3. Salve o arquivo e abra-o em seu navegador. Abra o console do navegador para ver a saudação sendo exibida.
 
-   Digite o comanda abaixo no terminal do repositório e copia o retor do comanda para o navegador para testar a aplicação **index.html**
+   Digite o comando abaixo no terminal do repositório e copia o retor do comanda para o navegador para testar a aplicação **index.html**
  
    ```
    pwd
@@ -110,7 +109,7 @@ Aqui estão os passos para executar um arquivo HTML usando um servidor web local
 
    - Node.js com o pacote http-server: Se você já tem o Node.js instalado no seu computador, pode usar o pacote http-server para criar um servidor web local rapidamente. Basta instalar o pacote globalmente usando o npm (gerenciador de pacotes do Node.js) e executá-lo a partir do diretório onde o seu arquivo HTML está localizado.
 
-   Para instalar o http-server globalmente, abra o terminal ou prompt de comando e digite:
+   Para instalar o http-server globalmente, abra o terminal e digite:
    ```
    npm install -g http-server
    ```
@@ -144,7 +143,7 @@ Lembre-se de que, para executar um servidor web local, você precisa ter o arqui
 
 1. Tipos de dados estáticos:
 
-Uma das principais vantagens do TypeScript é a capacidade de adicionar tipos estáticos às nossas variáveis, funções e objetos. Isso ajuda a evitar erros de digitação, melhora a legibilidade do código e oferece suporte ao desenvolvimento de software mais seguro. Veja um exemplo:
+Uma das principais vantagens do TypeScript é a capacidade de adicionar tipos estáticos às variáveis, funções e objetos. Isso ajuda a evitar erros de digitação, melhora a legibilidade do código e oferece suporte ao desenvolvimento de software mais seguro. Veja um exemplo:
 
 ```typescript
 let nome: string = "Elias Miranda";
@@ -184,7 +183,7 @@ let pessoa1 = new Pessoa("Maria", 30);
 pessoa1.apresentar();
 ```
 
-3. Herança e Polimorfismo também é implementado:
+3. Herança e Polimorfismo:
 Outro conceito importante da programação orientada a objetos é a herança, que permite que uma classe herde propriedades e métodos de outra classe. O TypeScript suporta herança de classes usando a palavra-chave `extends`. Vamos ver um exemplo:
 
 ```typescript
