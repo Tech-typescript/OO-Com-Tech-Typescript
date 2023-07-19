@@ -18,10 +18,12 @@ var GrupoApresentacao = /** @class */ (function () {
         else if (this.tempoGasto < 13) {
             this.qualidadeApresentacao -= 0.5 * (15 - this.tempoGasto);
         }
-        return this.qualidadeApresentacao;
+        if (this.qualidadeApresentacao < 0) {
+            this.qualidadeApresentacao = 0;
+        }
     };
     GrupoApresentacao.prototype.getResultado = function () {
-        var nota = this.verificarNota();
+        var nota = this.qualidadeApresentacao;
         return "Grupo " + this.grupo + " - Nota: " + nota;
     };
     return GrupoApresentacao;
@@ -93,10 +95,14 @@ document.getElementById("inputForm").addEventListener("submit", function (event)
     var grupoInput = document.getElementById("grupo").value;
     var dataInput = document.getElementById("data").value;
     var horarioInput = document.getElementById("horario").value;
+    var tempoInput = document.getElementById("tempoGasto").value;
+    var notaInput = document.getElementById("nota").value;
     if (grupoInput && dataInput && horarioInput) {
         var grupoIn = parseInt(grupoInput);
+        var tempoIn = parseInt(tempoInput);
+        var notaIn = parseFloat(notaInput);
         sistema.registrarApresentacao(grupoIn, dataInput, horarioInput);
-        console.log(sistema);
+        sistema.atribuirNota(grupoIn, tempoIn, notaIn);
         exibirResultado();
     }
 });

@@ -18,7 +18,7 @@ class GrupoApresentacao {
       this.qualidadeApresentacao = qualidadeApresentacao;
     }
   
-    verificarNota(): number {
+    verificarNota(): void {
       if (this.tempoGasto > 17) {
         // Penalidade por tempo gasto fora dos critérios
         this.qualidadeApresentacao -= 0.5 * (this.tempoGasto - 15);
@@ -29,14 +29,12 @@ class GrupoApresentacao {
       }
 
       if (this.qualidadeApresentacao < 0) {
-        return 0
+        this.qualidadeApresentacao = 0;
       }
-
-      return this.qualidadeApresentacao;
     }
   
     getResultado(): string {
-      const nota = this.verificarNota();
+      const nota = this.qualidadeApresentacao;
       return `Grupo ${this.grupo} - Nota: ${nota}`;
     }
 }
@@ -116,12 +114,16 @@ document.getElementById("inputForm").addEventListener("submit", function(event) 
   const grupoInput = (<HTMLInputElement>document.getElementById("grupo")).value;
   const dataInput = (<HTMLInputElement>document.getElementById("data")).value;
   const horarioInput = (<HTMLInputElement>document.getElementById("horario")).value;
+  const tempoInput = (<HTMLInputElement>document.getElementById("tempoGasto")).value;
+  const notaInput = (<HTMLInputElement>document.getElementById("nota")).value;
 
   if(grupoInput && dataInput && horarioInput){
     const grupoIn = parseInt(grupoInput);
+    const tempoIn = parseInt(tempoInput);
+    const notaIn = parseFloat(notaInput);
     sistema.registrarApresentacao(grupoIn, dataInput, horarioInput);
+    sistema.atribuirNota(grupoIn, tempoIn, notaIn);
 
-    console.log(sistema);
     exibirResultado();
   }
 
