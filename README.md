@@ -94,6 +94,13 @@ Agora que configuramos nosso ambiente, vamos criar uma classe simples em TypeScr
 
 3. Salve o arquivo e abra-o em seu navegador. Abra o console do navegador para ver a saudação sendo exibida.
 
+   Digite o comanda abaixo no terminal do repositório e copia o retor do comanda para o navegador para testar a aplicação **index.html**
+ 
+   ```
+   pwd
+   ```
+   ![pwd](imagem/pwd.png)
+
 ## V. Executando o exemplo no **web local**:
 Se você deseja executar um arquivo HTML sem usar um navegador, pode fazê-lo utilizando um servidor web local. Um servidor web local permite que você hospede e execute o arquivo HTML em um ambiente semelhante ao de um servidor real, mas apenas no seu computador.
 
