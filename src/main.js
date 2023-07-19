@@ -18,12 +18,10 @@ var GrupoApresentacao = /** @class */ (function () {
         else if (this.tempoGasto < 13) {
             this.qualidadeApresentacao -= 0.5 * (15 - this.tempoGasto);
         }
-        if (this.qualidadeApresentacao < 0) {
-            this.qualidadeApresentacao = 0;
-        }
+        return this.qualidadeApresentacao;
     };
     GrupoApresentacao.prototype.getResultado = function () {
-        var nota = this.qualidadeApresentacao;
+        var nota = this.verificarNota();
         return "Grupo " + this.grupo + " - Nota: " + nota;
     };
     return GrupoApresentacao;
@@ -76,39 +74,3 @@ function exibirResultado() {
 }
 // Esperar até que o DOM esteja completamente carregado
 document.addEventListener('DOMContentLoaded', exibirResultado);
-document.getElementById("toggleFormButton").addEventListener("click", function () {
-    var form = document.getElementById("inputForm");
-    var button = document.getElementById("toggleFormButton");
-    if (form && button) {
-        if (form.style.display === "none") {
-            form.style.display = "block";
-            button.textContent = "Cancelar";
-        }
-        else {
-            form.style.display = "none";
-            button.textContent = "Adicionar grupo";
-        }
-    }
-});
-document.getElementById("inputForm").addEventListener("submit", function (event) {
-    event.preventDefault();
-    var grupoInput = document.getElementById("grupo").value;
-    var dataInput = document.getElementById("data").value;
-    var horarioInput = document.getElementById("horario").value;
-    var tempoInput = document.getElementById("tempoGasto").value;
-    var notaInput = document.getElementById("nota").value;
-    if (grupoInput && dataInput && horarioInput) {
-        var grupoIn = parseInt(grupoInput);
-        var tempoIn = parseInt(tempoInput);
-        var notaIn = parseFloat(notaInput);
-        sistema.registrarApresentacao(grupoIn, dataInput, horarioInput);
-        sistema.atribuirNota(grupoIn, tempoIn, notaIn);
-        exibirResultado();
-    }
-});
-function submitForm(grupo, data, horario) {
-    console.log("Form submitted!");
-    console.log("Grupo:", grupo);
-    console.log("Data:", data);
-    console.log("Horário:", horario);
-}
