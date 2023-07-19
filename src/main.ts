@@ -90,3 +90,45 @@ function exibirResultado() {
 
 // Esperar até que o DOM esteja completamente carregado
 document.addEventListener('DOMContentLoaded', exibirResultado);
+
+document.getElementById("toggleFormButton").addEventListener("click", function() {
+  const form = document.getElementById("inputForm");
+  const button = document.getElementById("toggleFormButton");
+
+  if(form && button){
+    if (form.style.display === "none") {
+      form.style.display = "block";
+      button.textContent = "Cancelar"
+    } else {
+      form.style.display = "none";
+      button.textContent = "Adicionar grupo"
+    }
+  }
+});
+
+document.getElementById("inputForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const grupoInput = (<HTMLInputElement>document.getElementById("grupo")).value;
+  const dataInput = (<HTMLInputElement>document.getElementById("data")).value;
+  const horarioInput = (<HTMLInputElement>document.getElementById("horario")).value;
+
+  if(grupoInput && dataInput && horarioInput){
+    const grupoIn = parseInt(grupoInput);
+    sistema.registrarApresentacao(grupoIn, dataInput, horarioInput);
+
+    console.log(sistema);
+    exibirResultado();
+  }
+
+});
+
+function submitForm(grupo, data, horario) {
+
+  console.log("Form submitted!");
+  console.log("Grupo:", grupo);
+  console.log("Data:", data);
+  console.log("Horário:", horario);
+
+}
+
