@@ -28,6 +28,10 @@ class GrupoApresentacao {
         this.qualidadeApresentacao -= 0.5 * (15 - this.tempoGasto);
       }
 
+      if (this.qualidadeApresentacao < 0) {
+        return 0
+      }
+
       return this.qualidadeApresentacao;
     }
   
