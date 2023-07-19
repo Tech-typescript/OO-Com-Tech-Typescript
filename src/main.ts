@@ -65,7 +65,7 @@ const sistema = new SistemaCorrecao();
 
 sistema.registrarApresentacao(1, "2023-07-25", "14:00");
 sistema.registrarApresentacao(2, "2023-07-25", "16:00");
-sistema.registrarApresentacao(2, "2023-07-25", "17:00");
+sistema.registrarApresentacao(3, "2023-07-25", "17:00");
 
 // Atribuir notas para os grupos
 sistema.atribuirNota(1, 12, 8); // Grupo 1 - Tempo gasto: 12 min, Qualidade: 8
